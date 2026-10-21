@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "index",
+    "---Основы---",
+    "getting-started",
+    "configuration",
+    "---Контент---",
+    "markdown",
+    "publishing"
+  ]
+}

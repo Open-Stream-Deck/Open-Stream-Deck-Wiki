@@ -1,0 +1,5 @@
+{
+  "title": "Markdown",
+  "description": "Разметка, код, выноски, формулы, диаграммы и компоненты.",
+  "pages": ["index", "code", "callouts", "math-and-diagrams", "components"]
+}

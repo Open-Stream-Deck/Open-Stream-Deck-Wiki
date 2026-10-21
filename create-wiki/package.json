@@ -1,0 +1,39 @@
+{
+  "name": "@opensd/create-wiki",
+  "version": "1.0.0",
+  "description": "Создание вики Open Stream Deck: pnpm create @opensd/wiki",
+  "keywords": [
+    "opensd",
+    "open-stream-deck",
+    "wiki",
+    "docs",
+    "nextjs",
+    "markdown",
+    "create"
+  ],
+  "homepage": "https://github.com/Open-Stream-Deck/Open-Stream-Deck-Wiki",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Open-Stream-Deck/Open-Stream-Deck-Wiki.git",
+    "directory": "create-wiki"
+  },
+  "license": "MIT",
+  "author": "whxtelxs",
+  "type": "module",
+  "bin": {
+    "create-wiki": "bin/create-wiki.mjs"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepack": "node scripts/copy-template.mjs"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}

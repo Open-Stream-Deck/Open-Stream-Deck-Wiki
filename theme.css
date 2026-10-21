@@ -1,0 +1,51 @@
+:root {
+  --sans: 'Wix Madefor Text Variable', ui-sans-serif, system-ui, sans-serif;
+  --display: 'Wix Madefor Display Variable', 'Wix Madefor Text Variable', ui-sans-serif, sans-serif;
+  --mono: 'JetBrains Mono Variable', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+
+  --bg: #fbfbfa;
+  --surface: #f4f4f2;
+  --elevated: #ffffff;
+  --line: #e8e8e5;
+  --line-strong: #d9d9d5;
+  --fg: #141414;
+  --prose: #3a3a38;
+  --muted: #62625e;
+  --subtle: #8f8f8a;
+  --accent: #141414;
+  --accent-fg: #ffffff;
+  --code: #f6f6f4;
+  --ring: rgb(20 20 20 / 0.12);
+  --overlay: rgb(250 250 248 / 0.6);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.04), 0 12px 32px -12px rgb(0 0 0 / 0.12);
+
+  --note: oklch(0.55 0.15 250);
+  --tip: oklch(0.55 0.13 155);
+  --important: oklch(0.55 0.17 295);
+  --warning: oklch(0.62 0.14 70);
+  --caution: oklch(0.58 0.19 25);
+}
+
+.dark {
+  --bg: #141414;
+  --surface: #181818;
+  --elevated: #1c1c1c;
+  --line: #262626;
+  --line-strong: #2f2d2e;
+  --fg: #ffffff;
+  --prose: #c9c9c9;
+  --muted: #aaaaaa;
+  --subtle: #727272;
+  --accent: #ffffff;
+  --accent-fg: #141414;
+  --code: #171717;
+  --ring: rgb(255 255 255 / 0.14);
+  --overlay: rgb(10 10 10 / 0.6);
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 24px 48px -16px rgb(0 0 0 / 0.6);
+
+  --note: oklch(0.74 0.12 250);
+  --tip: oklch(0.76 0.12 155);
+  --important: oklch(0.74 0.13 295);
+  --warning: oklch(0.8 0.12 75);
+  --caution: oklch(0.72 0.15 25);
+}

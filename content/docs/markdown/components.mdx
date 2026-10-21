@@ -1,0 +1,99 @@
+---
+title: MDX-компоненты
+description: В файлах .mdx можно использовать React-компоненты прямо в тексте.
+---
+
+Компоненты доступны глобально, импортировать их не нужно. Список лежит в `src/components/mdx/index.tsx`, туда же добавляются свои.
+
+## Callout
+
+```mdx
+<Callout type="tip" title="Свой заголовок">
+  Текст с **разметкой**.
+</Callout>
+```
+
+<Callout type="tip" title="Свой заголовок">
+  Текст с **разметкой**.
+</Callout>
+
+<Callout type="caution">Без заголовка подставится название типа.</Callout>
+
+## Cards
+
+```mdx
+<Cards>
+  <Card title="Быстрый старт" href="../getting-started/index.md" description="Установка и запуск." />
+  <Card title="Next.js" href="https://nextjs.org" description="Внешняя ссылка." />
+</Cards>
+```
+
+<Cards>
+  <Card title="Быстрый старт" href="../getting-started/index.md" description="Установка и запуск." />
+  <Card title="Next.js" href="https://nextjs.org" description="Внешняя ссылка откроется в новой вкладке." />
+</Cards>
+
+## Steps
+
+<Steps>
+  <Step>
+    ### Установите зависимости
+
+    Выполните `pnpm install` в корне проекта.
+  </Step>
+  <Step>
+    ### Запустите dev-сервер
+
+    `pnpm dev` поднимет вики на `localhost:3000`.
+  </Step>
+  <Step>
+    ### Пишите
+
+    Создайте файл в `content/docs`, он сразу появится в навигации.
+  </Step>
+</Steps>
+
+## Tabs
+
+```mdx
+<Tabs id="pm" items={['pnpm', 'npm']}>
+  <Tab value="pnpm">`pnpm add motion`</Tab>
+  <Tab value="npm">`npm install motion`</Tab>
+</Tabs>
+```
+
+<Tabs id="pm" items={['pnpm', 'npm']}>
+  <Tab value="pnpm">`pnpm add motion`</Tab>
+  <Tab value="npm">`npm install motion`</Tab>
+</Tabs>
+
+## Details
+
+<Details summary="Можно ли использовать HTML-комментарии в MDX?">
+  Нет. В MDX вместо них используются комментарии в фигурных скобках со звёздочками, как в JSX.
+</Details>
+
+## Выражения
+
+В MDX работают JavaScript-выражения: сегодня {new Date().getFullYear()} год, а 2 + 2 = {2 + 2}.
+
+## Свой компонент
+
+Свои компоненты лежат в папке `components` в корне проекта. Создайте файл и добавьте компонент в список.
+
+```tsx title="components/badge.tsx"
+export function Badge({ children }: { children: React.ReactNode }) {
+  return <span className="rounded-md border px-1.5 py-0.5 text-xs">{children}</span>
+}
+```
+
+```tsx title="components/index.tsx"
+import type { MDXComponents } from 'mdx/types'
+import { Badge } from './badge' // [!code ++]
+
+export const components: MDXComponents = {
+  Badge, // [!code ++]
+}
+```
+
+После этого `<Badge>Новое</Badge>` работает в любом `.mdx` файле. Компонент с тем же именем, что и встроенный, заменяет встроенный.

@@ -1,0 +1,5 @@
+{
+  "title": "Настройка",
+  "description": "Конфиг, навигация, оформление, поиск и ИИ.",
+  "pages": ["index", "navigation", "theming", "search-and-ai"]
+}

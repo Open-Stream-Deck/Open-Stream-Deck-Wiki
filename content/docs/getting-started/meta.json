@@ -1,0 +1,6 @@
+{
+  "title": "Начало работы",
+  "description": "Установка, запуск и первая страница.",
+  "defaultOpen": true,
+  "pages": ["index", "structure", "first-page"]
+}
