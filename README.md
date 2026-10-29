@@ -1,3 +1,5 @@
+![Open Stream Deck Wiki](.github/cover.png)
+
 # Open Stream Deck Wiki
 
 Шаблон вики на Next.js. Страницы пишутся в Markdown, всё остальное уже готово: навигация, поиск, светлая и тёмная темы, подсветка кода, анимации.
